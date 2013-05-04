@@ -1,0 +1,14 @@
+{
+  "name": "server-template",
+  "description": "A all purpose node.js server template",
+  "author": "Jeremy Huff <charlie@nodejitsu.com>",
+  "dependencies": {
+    "express": "*",
+    "ejs":  "*",
+    "mongodb": "*",
+    "socket.io": "*",
+    "passport": "*",
+    "passport-local": "*"
+  },
+  "engine": "node >= 0.4.1"
+}
