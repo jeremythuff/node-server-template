@@ -1,11 +1,11 @@
-var express 	= 		require('express');
-var server 		= 		express();
-var ejs = require('ejs'); 
-ejs.open = '{{'; 
-ejs.close = '}}';
+var express = 	require('express');
+var server 	= 	express();
+var ejs 	= 	require('ejs'); 
+ejs.open 	= 	'{{'; 
+ejs.close 	= 	'}}';
 
 
-var oneDay 	= 		86400000;
+var oneDay 	= 	86400000;
 server.use(express.compress());
 
 server.configure(function(){
@@ -16,13 +16,12 @@ server.configure(function(){
   server.set('views', __dirname + "/www");
 });
 
-
 server.all("*", function(req, res, next) {
 	var request = req.params[0];
 	
 	if((request.substr(0, 1) === "/")&&(request.substr(request.length - 4) === "html")) {
 		request = request.substr(1);
-		res.render(request);
+			res.render(request);
 	} else {
 		next();
 	}
