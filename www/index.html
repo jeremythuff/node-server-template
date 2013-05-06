@@ -1,33 +1,38 @@
+<!--
+Here you can include any variables that you would like to call, 
+either in this doucment or inside any of you includes
+-->
 {{
-	var pageTitle = 'Node Server Template Page';
-	var projectName = 'Node Server Template';
+	var pageTitle = 'Node Server Template Page';	
 }}
 
 {{include inc.start.html}}
- 	<!-- Clear all html and use your own content-->
-    <div class="hero-unit">
-	    <h1>Hello, {{= projectName}}!</h1>
-	    <p>This is a template for a simple node.js app which will include: and express and ejs style back end with mongoDB and socket.io, passport authentication middleware, and a bootstap, jquery-ui and HTML5 boilerplate front end.</p>
-	    <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
-  	</div>
-  	<div class="row">
-	    <div class="span4">
-	      <h2>Heading</h2>
-	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	      <p><a class="btn" href="#">View details »</a></p>
-	    </div>
-	    <div class="span4">
-	      <h2>Heading</h2>
-	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-	      <p><a class="btn" href="#">View details »</a></p>
-	   </div>
-	    <div class="span4">
-	      <h2>Heading</h2>
-	      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-	      <p><a class="btn" href="#">View details »</a></p>
-	    </div>
-  </div>
-  <!--End of body content-->
+	{{include inc.header.html}}
+<!-- Your content here-->
+    <div class="well">
+    	<h1>Hello World!</h1>
+    	<p>Hey I am a node server boilerplate.</p>
+    	<p>I have been preconfigured with all a node application needs.</p>
 
+    	<ul>
+    		<li><strong>Back End</strong></li>
+    		<ul>
+    			<li>express: <em>for easy server creation.</em></li>
+    			<li>socket.io: <em>for server client communication <strong>* coming soon!</strong></em></li>
+    			<li>mongoDB: <em>for backend data handling <strong>* coming soon!</strong></em></li>
+    		</ul>
+    		<li><strong>Middleware</strong></li>
+    		<ul>
+    			<li>ejs: <em>for templating with includes</em></li>
+    			<li>passport: <em>for authentication <strong>* coming soon!</strong></em></li>
+    		</ul>
+    		<li><strong>Front End</strong></li>
+    		<ul>
+    			<li>bootstrap: <em>for quick, easy and responsive styling</em></li>
+    			<li>html5 boilerplate: <em>for a solid, modern and browser compatible front end</em></li>
+    		</ul>
+    	</ul>
+    </div>
+<!--End of body content-->
     {{include inc.footer.html}}
 {{include inc.end.html}}
