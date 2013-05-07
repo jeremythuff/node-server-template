@@ -5,14 +5,22 @@
 I have been preconfigured with all a node application needs.
 
 ###Back End
-* **express**: *for easy server creation.*
-* **socket.io**: *for server client communication* ***coming soon!***
-* **mongoDB**: *for backend data handling* ***coming soon!***
+* **[express][1]**: *for easy server creation.*
+* **[socket.io][2]**: *for server client communication* ***coming soon!***
+* **[mongoDB][3]**: *for backend data handling* ***coming soon!***
 
 ###Middleware
-* **ejs**: *for templating with includes*
-* **passport**: *for authentication* ***coming soon!***
+* **[ejs][4]**: *for templating with includes*
+* **[passport][5]**: *for authentication* ***coming soon!***
 
 ###Front End
-* **bootstrap**: *for quick, easy and responsive styling*
-* **html5 boilerplate**: *for a solid, modern and browser compatible front end*
+* **[bootstrap][6]**: *for quick, easy and responsive styling*
+* **[html5 boilerplate][7]**: *for a solid, modern and browser compatible front end*
+
+[1]: http://expressjs.com/ "Go to the express.js web page!"
+[2]: http://socket.io/ "Go to the socket.io web page!"
+[3]: http://www.mongodb.org/ "Go to the mongoDB web page!"
+[4]: http://embeddedjs.com/ "Go to the ejs web page!"
+[5]: http://passportjs.org/ "Go to the passport.js web page!"
+[6]: http://twitter.github.io/bootstrap/ "Go to the Twitter Bootstrap web page!"
+[7]: http://html5boilerplate.com/ "Go to the HTML5 Boilerplate web page!"
