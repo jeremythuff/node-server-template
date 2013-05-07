@@ -1,8 +1,19 @@
-var express = 	require('express');
-var server 	= 	express();
-var ejs 	= 	require('ejs'); 
+var express = require('express') 
+  , fs = require('fs')
+  , exec = require('child_process').exec
+  , util = require('util')
+  , Files = {}
+  , passport = require('passport')
+  , flash = require('connect-flash')
+  , LocalStrategy = require('passport-local').Strategy
+  , nib = require('nib')
+  ,	ejs = 	require('ejs'); 
+
+	
 ejs.open 	= 	'{{'; 
 ejs.close 	= 	'}}';
+
+server 	= 	express();
 
 var oneDay 	= 	86400000;
 server.use(express.compress());

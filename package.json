@@ -1,14 +1,26 @@
 {
   "name": "server-template",
-  "description": "A all purpose node.js server template",
-  "author": "Jeremy Huff <charlie@nodejitsu.com>",
+  "description": "A all purpose node.js server boilerplate",
+  "author": "Jeremy Huff <jeremythuff@gmail.com>",
+   "keywords": [
+    "Remote Display",
+    "Node.js",
+    "application",
+    "Socket.io"
+  ],
   "dependencies": {
     "express": "*",
     "ejs":  "*",
     "mongodb": "*",
     "socket.io": "*",
     "passport": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "connect-flash": "0.1.x",
+    "nib": "*",
+    "stylus": "*"
   },
-  "engine": "node >= 0.4.1"
+ "engines": {
+    "node": ">= 0.4.1",
+    "npm": ">= 1.0.0"
+  }
 }
