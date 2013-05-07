@@ -1,6 +1,6 @@
 # node-server-template
 
-##Hey, I am a node server boilerplate.
+###Hey, I am a node server boilerplate.
 
 I have been preconfigured with all a node application needs.
 
