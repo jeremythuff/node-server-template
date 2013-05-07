@@ -13,9 +13,13 @@ var express = require('express')
 ejs.open 	= 	'{{'; 
 ejs.close 	= 	'}}';
 
-server 	= 	express();
 
+var io;
+var socket_listener;
 var oneDay 	= 	86400000;
+var PORT = process.env.PORT || 8080;
+var IPADDRESS = process.env.IP || '127.0.0.1';
+server 	= 	express();
 server.use(express.compress());
 
 server.configure(function(){
@@ -25,6 +29,12 @@ server.configure(function(){
   server.set('view engine', 'html');
   server.set('views', __dirname + "/www");
   server.use(express.static(__dirname + '/www', { maxAge: oneDay }));
+  server.use('/varSocketURI.js', function(req, res) {
+		var port = argv['websocket-port'];
+		var socketURI = port ? ':'+port+'/' : '/';
+		res.set('Content-Type', 'text/javascript');
+		res.send('var socketURI="'+socketURI+'";');
+	});
 });
 
 server.all("*", function(req, res, next) {
@@ -40,4 +50,18 @@ server.all("*", function(req, res, next) {
 	}
 });
 
-server.listen(process.env.PORT || 8080);
+socket_listener = require('http').createServer(server);
+socket_listener.listen(PORT, IPADDRESS);
+
+io = require('socket.io').listen(socket_listener);
+io.configure(function(){
+     io.set('transports', [
+     'websocket'
+   , 'flashsocket'
+   , 'htmlfile'
+   , 'xhr-polling'
+   , 'jsonp-polling'
+ ]);
+});
+
+server.listen(PORT);

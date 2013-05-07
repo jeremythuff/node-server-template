@@ -6,7 +6,7 @@ I have been preconfigured with all a node application needs.
 
 ###Back End
 * **[express][1]**: *for easy server creation.*
-* **[socket.io][2]**: *for server client communication* ***coming soon!***
+* **[socket.io][2]**: *for server client communication*
 * **[mongoDB][3]**: *for backend data handling* ***coming soon!***
 
 ###Middleware
@@ -16,6 +16,7 @@ I have been preconfigured with all a node application needs.
 ###Front End
 * **[bootstrap][6]**: *for quick, easy and responsive styling*
 * **[html5 boilerplate][7]**: *for a solid, modern and browser compatible front end*
+* **[jQuery][7]**: *for powerful DOM manipulation*
 
 [1]: http://expressjs.com/ "Go to the express.js web page!"
 [2]: http://socket.io/ "Go to the socket.io web page!"
@@ -24,3 +25,4 @@ I have been preconfigured with all a node application needs.
 [5]: http://passportjs.org/ "Go to the passport.js web page!"
 [6]: http://twitter.github.io/bootstrap/ "Go to the Twitter Bootstrap web page!"
 [7]: http://html5boilerplate.com/ "Go to the HTML5 Boilerplate web page!"
+[8]: http://jquery.com/ "Go to the jQuery web page!"
