@@ -3,7 +3,8 @@ Here you can include any variables that you would like to call,
 either in this doucment or inside any of you includes
 -->
 {{
-	var pageTitle = 'Node Server Template Page';	
+	var pageTitle = 'Node Server Template Page';
+    var ejsUp = 'This message was placed here by ejs';	
 }}
 
 {{include inc.start.html}}
@@ -18,11 +19,11 @@ either in this doucment or inside any of you includes
     		<li><strong>Back End</strong></li>
     		<ul>
     			<li>express: <em>for easy server creation.</em></li>
-    			<li>socket.io: <em>for server client communication <strong>* coming soon!</strong></em></li>
     			<li>mongoDB: <em>for backend data handling <strong>* coming soon!</strong></em></li>
     		</ul>
     		<li><strong>Middleware</strong></li>
     		<ul>
+                <li>socket.io: <em>for server client communication <strong>* coming soon!</strong></em></li>
     			<li>ejs: <em>for templating with includes</em></li>
     			<li>passport: <em>for authentication <strong>* coming soon!</strong></em></li>
     		</ul>
@@ -33,6 +34,18 @@ either in this doucment or inside any of you includes
                 <li>jQuery: <em>for powerful DOM manipulation</em></li>
     		</ul>
     	</ul>
+        <br>
+        <hr>
+        <h2>Status:<h2>
+        <h3>socket.io</h3>
+        <h4 class="socketConnectionStatus" style="color:red">
+            disconnected
+        </h4>        
+        <em><span class="socketConnectionMessage">There is no connection to the server :(</span></em>
+        <h3>ejs.js</h3>
+        <h4 class="ejsStatus" style="color:red">ejs down</h4>        
+        <em class="ejsCheck">{{= ejsUp }}</em>
+        
     </div>
 <!--End of body content-->
     {{include inc.footer.html}}

@@ -6,10 +6,10 @@ I have been preconfigured with all a node application needs.
 
 ###Back End
 * **[express][1]**: *for easy server creation.*
-* **[socket.io][2]**: *for server client communication*
 * **[mongoDB][3]**: *for backend data handling* ***coming soon!***
 
 ###Middleware
+* **[socket.io][2]**: *for server client communication*
 * **[ejs][4]**: *for templating with includes*
 * **[passport][5]**: *for authentication* ***coming soon!***
 

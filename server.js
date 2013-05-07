@@ -64,4 +64,9 @@ io.configure(function(){
  ]);
 });
 
+io.sockets.on('connection', function (socket) {	
+	io.sockets.emit('connectionMsg', 'This message comes straight from the server via socket.io!');
+});
+
 server.listen(PORT);
+
