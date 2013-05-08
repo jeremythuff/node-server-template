@@ -12,16 +12,27 @@ $(document).ready(function() {
 //socket.io code
 var socket = io.connect('localhost');//connect to our server
 
-socket.on('connect', function (data) {//updates connection status
-		$(".socketConnectionStatus").css("color", "green");
-		$(".socketConnectionStatus").html("connected");
-		socket.on('connectionMsg', function(data) {
-			$(".socketConnectionMessage").html(data);
-		});
+
+socket.on('connectionMsg', function(data) {
+	$(".socketConnectionStatus").css("color", "green");
+	$(".socketConnectionMessage").html(data);
+	$(".socketConnectionStatus").html("connected");
 });
 
 socket.on('disconnect', function () {//updates connection status
 		$(".socketConnectionStatus").css("color", "red");
 		$(".socketConnectionMessage").html("There is no connection to the server :(");
 		$(".socketConnectionStatus").html("disconnected");
+});
+
+socket.on('modules', function(data) {
+	$(".moduleList").html("");
+
+	$(data).each(function() {
+		var filename = this.substring(this.lastIndexOf("\\")+1);
+		if(filename[0] !== ".") {
+			$(".moduleList").append("<li><i class='icon-folder-open'></i> "+filename+"</li>");
+		}
+	});
+
 });

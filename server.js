@@ -64,9 +64,16 @@ io.configure(function(){
  ]);
 });
 
-io.sockets.on('connection', function (socket) {	
-	io.sockets.emit('connectionMsg', 'This message comes straight from the server via socket.io!');
+
+fs.readdir('./node_modules', function (err, files) { 
+	modules = files;
+});
+
+io.sockets.on('connection', function (socket) {
+		
+	io.sockets.emit('connectionMsg', "This message was bdelivered from the server via web sockets");
+	io.sockets.emit('modules', modules);
+
 });
 
 server.listen(PORT);
-

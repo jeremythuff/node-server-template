@@ -10,43 +10,44 @@ either in this doucment or inside any of you includes
 {{include inc.start.html}}
 	{{include inc.header.html}}
 <!-- Your content here-->
-    <div class="well">
-    	<h1>Hello World!</h1>
-    	<p>Hey I am a node server boilerplate.</p>
-    	<p>I have been preconfigured with all a node application needs.</p>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span9">
+            <div class="hero-unit">
+                <h1>Hello, world!</h1>
+                <p>Hey I am a node server boilerplate.</p>
+                <p>I have been preconfigured with all a node application needs.</p>
+                <p><a href="https://github.com/jeremythuff/node-server-template" class="btn btn-primary btn-large">Learn more »</a></p>
+            </div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <h3>socket.io</h3>
+                    <h4 class="socketConnectionStatus" style="color:red">
+                        disconnected
+                    </h4>        
+                    <pre>
+                        <em><span class="socketConnectionMessage">There is no connection to the server :(</span></em>
+                    </pre>
+                </div>
+                <div class="span6">
+                    <h3>ejs.js</h3>
+                    <h4 class="ejsStatus" style="color:red">ejs down</h4>        
+                    <pre><em class="ejsCheck">{{= ejsUp }}</em></pre>
+                </div>
+            </div>
+        </div>
+        <div class="span3">
+            <div class="well sidebar-nav">
+                <h3>Module List:</h3>
+                <ul class="moduleList" style="list-style:none;">
 
-    	<ul>
-    		<li><strong>Back End</strong></li>
-    		<ul>
-    			<li>express: <em>for easy server creation.</em></li>
-    			<li>mongoDB: <em>for backend data handling <strong>* coming soon!</strong></em></li>
-    		</ul>
-    		<li><strong>Middleware</strong></li>
-    		<ul>
-                <li>socket.io: <em>for server client communication <strong>* coming soon!</strong></em></li>
-    			<li>ejs: <em>for templating with includes</em></li>
-    			<li>passport: <em>for authentication <strong>* coming soon!</strong></em></li>
-    		</ul>
-    		<li><strong>Front End</strong></li>
-    		<ul>
-    			<li>bootstrap: <em>for quick, easy and responsive styling</em></li>
-    			<li>html5 boilerplate: <em>for a solid, modern and browser compatible front end</em></li>
-                <li>jQuery: <em>for powerful DOM manipulation</em></li>
-    		</ul>
-    	</ul>
-        <br>
-        <hr>
-        <h2>Status:<h2>
-        <h3>socket.io</h3>
-        <h4 class="socketConnectionStatus" style="color:red">
-            disconnected
-        </h4>        
-        <em><span class="socketConnectionMessage">There is no connection to the server :(</span></em>
-        <h3>ejs.js</h3>
-        <h4 class="ejsStatus" style="color:red">ejs down</h4>        
-        <em class="ejsCheck">{{= ejsUp }}</em>
-        
+                </ul>
+                <hr>
+            </div>
+        </div>
     </div>
+</div>
+
 <!--End of body content-->
     {{include inc.footer.html}}
 {{include inc.end.html}}
