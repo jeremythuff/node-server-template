@@ -15,9 +15,7 @@
     "socket.io": "0.9.x",
     "passport": "*",
     "passport-local": "*",
-    "connect-flash": "0.1.x",
-    "nib": "*",
-    "stylus": "*"
+    "connect-flash": "0.1.x"
   },
   "repository": {
     "type": "git",
