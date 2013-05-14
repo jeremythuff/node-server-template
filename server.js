@@ -17,8 +17,9 @@ ejs.close 	= 	'}}';
 var io;
 var socket_listener;
 var oneDay 	= 	86400000;
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || process.argv[2] || 8020;
 var IPADDRESS = process.env.IP || '127.0.0.1';
+
 server 	= 	express();
 server.use(express.compress());
 
@@ -71,9 +72,16 @@ fs.readdir('./node_modules', function (err, files) {
 
 io.sockets.on('connection', function (socket) {
 		
-	io.sockets.emit('connectionMsg', "This message was bdelivered from the server via web sockets");
-	io.sockets.emit('modules', modules);
+	socket.emit('connectionMsg', "This message was bdelivered from the server via web sockets");
+	socket.emit('modules', modules);
+
+  
 
 });
+
+io.sockets.on('start', function(data) {
+    console.log(data);
+});
+
 
 server.listen(PORT);
